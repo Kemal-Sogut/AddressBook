@@ -7,7 +7,7 @@
 
 ## Azure deployment
 
-https://<your-app-name>.azurewebsites.net/addressbook/1
+https://addressbookkemal-ehb7ckg6fqbkc9h3.northcentralus-01.azurewebsites.net/addressbook/1
 
 ## About
 
