@@ -13,7 +13,7 @@ class BuddyInfoRepositoryTest {
 
     @Test
     void saveAndFind() {
-        repo.save(new BuddyInfo("TestBuddy", "1 Test St", "613-555-9999"));
+        repo.save(new BuddyInfo("TestBuddy", "1 Test St", "613-555-9999","test@email.com"));
         assertEquals(1, repo.findByName("TestBuddy").size());
     }
 }

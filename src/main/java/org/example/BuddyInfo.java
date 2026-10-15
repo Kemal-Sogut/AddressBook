@@ -15,25 +15,26 @@ public class BuddyInfo {
     private String name;
     private String address;
     private String phoneNumber;
+    private String email;
 
     // Default constructor with NO data.
     public BuddyInfo() {
         this.name = "Unknown";
         this.address = "Unknown";
         this.phoneNumber = "Unknown";
+        this.email = "Unknown";
     }
 
     // Constructor with data
-    public BuddyInfo(String name, String address, String phoneNumber) {
+    public BuddyInfo(String name, String address, String phoneNumber, String email) {
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
+        this.email = email;
     }
 
     // Getters and Setters
-    public String getName() {
-        return name;
-    }
+    public String getName() {return name;}
 
     public void setName(String name) {
         this.name = name;
@@ -54,6 +55,15 @@ public class BuddyInfo {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmaill(String email) {
+        this.email = email;
+    }
+
     @Override
     public String toString() {
         return name + ", " + address + ", " + phoneNumber;

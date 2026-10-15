@@ -14,8 +14,8 @@ class AddressBookTest {
     @BeforeEach
     void setUp() {
         book = new AddressBook();
-        alice = new BuddyInfo("Alice", "123 Bank St", "613-555-0101");
-        bob = new BuddyInfo("Bob", "45 Rideau St", "613-555-0202");
+        alice = new BuddyInfo("Alice", "123 Bank St", "613-555-0101","alice@email.com");
+        bob = new BuddyInfo("Bob", "45 Rideau St", "613-555-0202","bob@email.com");
     }
 
     @Test

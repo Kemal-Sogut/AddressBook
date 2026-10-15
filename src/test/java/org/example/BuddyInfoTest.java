@@ -11,7 +11,7 @@ class BuddyInfoTest {
 
     @BeforeEach
     void setUp() {
-        buddy = new BuddyInfo("Alice", "123 Bank St", "613-555-0101");
+        buddy = new BuddyInfo("Alice", "123 Bank St", "613-555-0101","alice@email.com");
     }
 
     @Test

@@ -19,8 +19,8 @@ public class AddressBookApplication {
     public CommandLineRunner demo(BuddyInfoRepository buddyRepo, AddressBookRepository bookRepo) {
         return args -> {
             // Persist buddies
-            buddyRepo.save(new BuddyInfo("Tom", "123 Main St", "613-555-5555"));
-            buddyRepo.save(new BuddyInfo("Tommy", "321 Other St", "613-555-5556"));
+            buddyRepo.save(new BuddyInfo("Tom", "123 Main St", "613-555-5555","tom@email.com"));
+            buddyRepo.save(new BuddyInfo("Tommy", "321 Other St", "613-555-5556","tommy@email.com"));
 
             log.info("All buddies via findAll():");
             buddyRepo.findAll().forEach(b -> log.info(b.getId() + ": " + b));
@@ -30,8 +30,8 @@ public class AddressBookApplication {
 
             // Persist an AddressBook (cascade saves its buddies)
             AddressBook book = new AddressBook();
-            book.addBuddy(new BuddyInfo("Alice", "1 Elm St", "613-555-0001"));
-            book.addBuddy(new BuddyInfo("Bob", "2 Oak St", "613-555-0002"));
+            book.addBuddy(new BuddyInfo("Alice", "1 Elm St", "613-555-0001","alice@email.com"));
+            book.addBuddy(new BuddyInfo("Bob", "2 Oak St", "613-555-0002","alice@email.com"));
             bookRepo.save(book);
 
             log.info("All address books:");

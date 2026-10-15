@@ -17,4 +17,9 @@ public class AddressBookViewController {
         model.addAttribute("book", bookRepo.findById(id));
         return "addressbook"; // resolves to templates/addressbook.html
     }
+
+    @GetMapping("/")
+    public String home() {
+        return "redirect:/addressbook/1";
+    }
 }

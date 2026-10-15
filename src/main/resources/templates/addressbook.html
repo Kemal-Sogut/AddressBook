@@ -4,11 +4,14 @@
 <body>
 <h1 th:text="'Address Book #' + ${book.id}">Address Book</h1>
 <table border="1">
-    <tr><th>Name</th><th>Address</th><th>Phone</th></tr>
+    <tr><th>Name</th><th>Address</th><th>Phone</th><th>Email</th></tr>
     <tr th:each="buddy : ${book.buddies}">
         <td th:text="${buddy.name}"></td>
         <td th:text="${buddy.address}"></td>
         <td th:text="${buddy.phoneNumber}"></td>
+        <td th:text="${buddy.email}"></td>
+
+
     </tr>
 </table>
 </body>
