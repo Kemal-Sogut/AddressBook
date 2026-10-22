@@ -60,7 +60,7 @@ public class BuddyInfo {
         return email;
     }
 
-    public void setEmaill(String email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 

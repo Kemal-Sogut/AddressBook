@@ -2,6 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head><title>Address Book</title></head>
 <body>
+<p><a th:href="@{/}">&larr; All address books</a></p>
 <h1 th:text="'Address Book #' + ${book.id}">Address Book</h1>
 <table border="1">
     <tr><th>Name</th><th>Address</th><th>Phone</th><th>Email</th></tr>
@@ -10,9 +11,16 @@
         <td th:text="${buddy.address}"></td>
         <td th:text="${buddy.phoneNumber}"></td>
         <td th:text="${buddy.email}"></td>
-
-
     </tr>
 </table>
+
+<h2>Add a buddy</h2>
+<form th:action="@{/addressbook/{id}/buddies(id=${book.id})}" th:object="${buddy}" method="post">
+    <p><label>Name: <input type="text" th:field="*{name}" required/></label></p>
+    <p><label>Address: <input type="text" th:field="*{address}"/></label></p>
+    <p><label>Phone: <input type="text" th:field="*{phoneNumber}"/></label></p>
+    <p><label>Email: <input type="email" th:field="*{email}"/></label></p>
+    <button type="submit">Add buddy</button>
+</form>
 </body>
 </html>
